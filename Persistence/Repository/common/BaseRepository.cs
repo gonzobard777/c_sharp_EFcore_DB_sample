@@ -1,86 +1,40 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Persistence.Interfaces;
+﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Application.Interfaces.Infrastructure;
+using Microsoft.EntityFrameworkCore;
 using Domain.Interfaces;
 
 namespace Persistence.Repository.common;
 
-/*
- * Репозиторий, реализующий базовые операции:
- *   - Create
- *   - Read
- *   - Update
- *   - Delete
- *   - List
- */
-public class BaseRepository : IBaseRepository
+public class BaseRepository<T> : IBaseRepository<T> where T : class, IEntity
 {
-    protected AppDbContext DbContext { get; }
+    private DbSet<T> DbSet { get; }
 
     public BaseRepository(AppDbContext dbContext)
     {
-        DbContext = dbContext;
+        DbSet = dbContext.Set<T>();
     }
 
-    public async Task<int> Create<T>(T model) where T : class, IEntity
-    {
-        var entityEntry = await DbContext.Set<T>().AddAsync(model);
-        await SaveChangesAsync();
-        return entityEntry.Entity.Id;
-    }
+    public async Task<EntityEntry<T>> Create(T model) => await DbSet.AddAsync(model);
 
-    public Task<T?> Read<T>(int id) where T : class, IEntity
-    {
-        return GetNoTrackingEntity<T>(id);
-    }
-
-    public async Task<bool> Update<T>(int id, T model) where T : class, IEntity
-    {
-        var entity = await GetNoTrackingEntity<T>(id);
-        if (entity is null)
-            return false;
-        model.Id = id;
-        DbContext.Set<T>().Update(model);
-        await SaveChangesAsync();
-        return true;
-    }
-
-    public async Task<bool> Delete<T>(int id) where T : class, IEntity
-    {
-        var entity = await GetTrackingEntity<T>(id);
-        if (entity is null)
-            return false;
-        DbContext.Set<T>().Remove(entity);
-        await SaveChangesAsync();
-        return true;
-    }
-
-    public virtual async Task<IEnumerable<T>> List<T>(ListQueryParams? queryParams, IQueryable<T>? query) where T : class, IEntity
-    {
-        query ??= DbContext.Set<T>();
-        // здесь можно добавить к запросу что-то общее для всех
-        return await query.ToListAsync();
-    }
-
-
-    #region Support
-
-    private async Task SaveChangesAsync() => await DbContext.SaveChangesAsync();
-
-    private async Task<T?> GetTrackingEntity<T>(int id) where T : class, IEntity
-    {
-        return id > 0
-            ? await DbContext.Set<T>().FirstOrDefaultAsync(entity => entity.Id == id)
+    public async Task<T?> Read(int id, EntityTracking tracking) =>
+        id > 0
+            ? await NewQuery(tracking).FirstOrDefaultAsync(entity => entity.Id == id)
             : null;
-    }
 
-    private async Task<T?> GetNoTrackingEntity<T>(int id) where T : class, IEntity
+    public EntityEntry<T> Update(T model) => DbSet.Update(model);
+
+    public EntityEntry<T> Delete(T model) => DbSet.Remove(model);
+
+    public IQueryable<T> NewQuery(EntityTracking tracking)
     {
-        return id > 0
-            ? await DbContext.Set<T>()
-                .AsNoTracking()
-                .FirstOrDefaultAsync(entity => entity.Id == id)
-            : null;
+        switch (tracking)
+        {
+            case EntityTracking.Disabled:
+                return DbSet.AsNoTracking();
+            case EntityTracking.DisabledWithIdentityResolution:
+                return DbSet.AsNoTrackingWithIdentityResolution();
+            default:
+                return DbSet.AsQueryable();
+        }
     }
-
-    #endregion Support
 }

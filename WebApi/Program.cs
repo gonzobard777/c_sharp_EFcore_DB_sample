@@ -12,7 +12,7 @@ public class Program
             try
             {
                 var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-                dbContext.Database.EnsureDeleted();
+                // dbContext.Database.EnsureDeleted();
                 dbContext.Database.EnsureCreated();
             }
             catch (Exception exception)

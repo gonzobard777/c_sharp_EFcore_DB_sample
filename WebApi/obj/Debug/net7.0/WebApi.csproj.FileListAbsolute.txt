@@ -82,3 +82,5 @@ D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\obj\Debug\
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\obj\Debug\net7.0\WebApi.pdb
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\obj\Debug\net7.0\WebApi.genruntimeconfig.cache
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\obj\Debug\net7.0\ref\WebApi.dll
+D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\Application.dll
+D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\Application.pdb

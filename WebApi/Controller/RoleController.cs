@@ -1,23 +1,12 @@
-﻿using Persistence.Repository.common;
-using Microsoft.AspNetCore.Mvc;
-using WebApi.Controller.common;
-using Persistence.Interfaces;
+﻿using WebApi.Controller.common;
+using Application.Interfaces;
 using Domain;
 
 namespace WebApi.Controller;
 
-public class RoleController : BaseController
+public class RoleController : ListController<Role>
 {
-    private IBaseRepository Repository { get; }
-
-    public RoleController(IBaseRepository repository)
+    public RoleController(IRoleService service) : base(service)
     {
-        Repository = repository;
-    }
-
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<Role>>> List(ListQueryParams? queryParams)
-    {
-        return Ok(await Repository.List<Role>(queryParams, null));
     }
 }

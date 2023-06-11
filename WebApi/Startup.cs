@@ -1,4 +1,4 @@
-﻿using System.Text.Json.Serialization;
+﻿using Application;
 using Persistence;
 
 namespace WebApi;
@@ -16,7 +16,8 @@ public class Startup
     // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
     public void ConfigureServices(IServiceCollection services)
     {
-        services.AddPersistence(Configuration);
+        services.AddPersistenceLayer(Configuration);
+        services.AddApplicationLayer();
 
         services
             .AddControllers()

@@ -1,12 +1,12 @@
 ﻿using WebApi.Controller.common;
-using Persistence.Interfaces;
+using Application.Interfaces;
 using Domain;
 
 namespace WebApi.Controller;
 
 public class CompanyController : FullController<Company>
 {
-    public CompanyController(IBaseRepository repository) : base(repository)
+    public CompanyController(ICompanyService service) : base(service)
     {
     }
 }

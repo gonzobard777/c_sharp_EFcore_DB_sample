@@ -1,19 +1,17 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Application.Interfaces.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Repository.common;
-using Persistence.Interfaces;
+using Application.Interfaces;
 using Persistence.Repository;
+using Domain;
 
 namespace Persistence;
 
-/**
- * Время существования, настройка и инициализация DbContext:
- *   https://learn.microsoft.com/ru-ru/ef/core/dbcontext-configuration/
- */
 public static class DependencyInjection
 {
-    public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddPersistenceLayer(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDbContext<AppDbContext>(
             optionsBuilder => { optionsBuilder.UseNpgsql(configuration.GetConnectionString("PostgresqlConnection")); },
@@ -21,7 +19,10 @@ public static class DependencyInjection
             ServiceLifetime.Scoped
         );
 
-        services.AddScoped<IBaseRepository, BaseRepository>();
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
+        services.AddScoped<IBaseRepository<Company>, CompanyRepository>();
+        services.AddScoped<IBaseRepository<User>, UserRepository>();
+        services.AddScoped<IBaseRepository<Role>, RoleRepository>();
         services.AddScoped<UserRepository>();
 
         return services;

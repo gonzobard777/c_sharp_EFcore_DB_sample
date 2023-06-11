@@ -269,6 +269,21 @@
           }
         }
       },
+      "Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.5",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.4"
+        },
+        "compile": {
+          "bin/placeholder/Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Application.dll": {}
+        }
+      },
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -679,6 +694,11 @@
         "postgresql.png"
       ]
     },
+    "Application/1.0.0": {
+      "type": "project",
+      "path": "../Application/Application.csproj",
+      "msbuildProject": "../Application/Application.csproj"
+    },
     "Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Domain.csproj",
@@ -687,6 +707,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Application >= 1.0.0",
       "Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.5",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 7.0.4"
@@ -719,6 +740,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "D:\\MEGA\\exchange-folder\\c sharp\\test_projects\\EFcore_DB_sample\\Application\\Application.csproj": {
+              "projectPath": "D:\\MEGA\\exchange-folder\\c sharp\\test_projects\\EFcore_DB_sample\\Application\\Application.csproj"
+            },
             "D:\\MEGA\\exchange-folder\\c sharp\\test_projects\\EFcore_DB_sample\\Domain\\Domain.csproj": {
               "projectPath": "D:\\MEGA\\exchange-folder\\c sharp\\test_projects\\EFcore_DB_sample\\Domain\\Domain.csproj"
             }

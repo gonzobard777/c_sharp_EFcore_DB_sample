@@ -1,12 +1,12 @@
 ﻿using WebApi.Controller.common;
-using Persistence.Repository;
+using Application.Interfaces;
 using Domain;
 
 namespace WebApi.Controller;
 
 public class UserController : FullController<User>
 {
-    public UserController(UserRepository repository) : base(repository)
+    public UserController(IUserService service) : base(service)
     {
     }
 }
