@@ -25,6 +25,7 @@ public class BaseRepository<T> : IBaseRepository<T> where T : class, IEntity
 
     public EntityEntry<T> Delete(T model) => DbSet.Remove(model);
 
+
     public IQueryable<T> NewQuery(EntityTracking tracking)
     {
         switch (tracking)
