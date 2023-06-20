@@ -13,3 +13,5 @@ D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\Application\obj\D
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\Application\obj\Debug\net7.0\refint\Application.dll
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\Application\obj\Debug\net7.0\Application.pdb
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\Application\obj\Debug\net7.0\ref\Application.dll
+D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\Application\bin\Debug\net7.0\Application.runtimeconfig.json
+D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\Application\obj\Debug\net7.0\Application.genruntimeconfig.cache

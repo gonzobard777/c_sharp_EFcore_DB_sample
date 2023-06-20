@@ -3,7 +3,6 @@ using Application.Interfaces.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Repository.common;
-using Application.Interfaces;
 using Persistence.Repository;
 using Domain;
 
@@ -23,7 +22,6 @@ public static class DependencyInjection
         services.AddScoped<IBaseRepository<Company>, CompanyRepository>();
         services.AddScoped<IBaseRepository<User>, UserRepository>();
         services.AddScoped<IBaseRepository<Role>, RoleRepository>();
-        services.AddScoped<UserRepository>();
 
         return services;
     }

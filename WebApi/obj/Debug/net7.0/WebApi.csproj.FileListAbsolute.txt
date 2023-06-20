@@ -47,16 +47,11 @@ D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\WebApi.runtimeconfig.json
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\WebApi.dll
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\WebApi.pdb
-D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
-D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\Microsoft.OpenApi.dll
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\Npgsql.dll
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
-D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
-D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\Domain.dll
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\Persistence.dll
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\Persistence.pdb
@@ -66,7 +61,6 @@ D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\obj\Debug\
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\obj\Debug\net7.0\WebApi.AssemblyInfoInputs.cache
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\obj\Debug\net7.0\WebApi.AssemblyInfo.cs
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\obj\Debug\net7.0\WebApi.csproj.CoreCompileInputs.cache
-D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\obj\Debug\net7.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\obj\Debug\net7.0\WebApi.MvcApplicationPartsAssemblyInfo.cache
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\obj\Debug\net7.0\staticwebassets\msbuild.WebApi.Microsoft.AspNetCore.StaticWebAssets.props
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\obj\Debug\net7.0\staticwebassets\msbuild.build.WebApi.props
@@ -84,3 +78,8 @@ D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\obj\Debug\
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\obj\Debug\net7.0\ref\WebApi.dll
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\Application.dll
 D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\Application.pdb
+D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\Humanizer.dll
+D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\Mono.TextTemplating.dll
+D:\MEGA\exchange-folder\c sharp\test_projects\EFcore_DB_sample\WebApi\bin\Debug\net7.0\System.CodeDom.dll
